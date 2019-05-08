@@ -77,7 +77,7 @@ independance<-function(X){
 independance(Database2$Marseille)
 #On regarde sur le fichier pdf t table avec les parametres suivants : 2 tailed, level of signifiance : 0.05,
 #degre de liberte : n - 1 (15 - 1 = 14). On remarque que dans le fichier pdf la valeur est de 2.145 
-# et ici nous obtenons 2.177 ce qui montre que avec alpha = 5% l'inflation n'affecte pas tellement le cout
+# et ici nous obtenons 2.177 ce qui montre que avec alpha = 5% l'inflation n'affecte pas vraiment le cout
 # de la vie a marseille.
 
 #Question_6
