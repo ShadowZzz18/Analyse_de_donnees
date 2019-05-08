@@ -14,7 +14,7 @@ plot(Database$B, Database$Y)
 plot(Database$C, Database$Y)
 plot(Database$D, Database$Y)
 plot(Database$E, Database$Y)
-#On observe que : 
+# On observe que : 
 # - Database$A : Fonction decroissante monotone, relation non-lineaire
 # - Database$B : Fontion croissante monotone, relation non-lineaire
 # - Database$C : Nuage de points aleatoires, pas de relation
@@ -59,12 +59,12 @@ score[3] = coeffspearman(Database$C, Database$Y)
 score[4] = coeffspearman(Database$D, Database$Y)
 score[5] = coeffspearman(Database$E, Database$Y)
 which.min(abs(score))
-#Le resultat minimum est egalement a l'indice 5 et est plus grand que celui du tableau correlation
-#cor(Database$A,Databse$Y,method="spearman")
+# Le resultat minimum est egalement a l'indice 5 et est plus grand que celui du tableau correlation
+# cor(Database$A,Databse$Y,method="spearman")
 
 #Question_4
 # Il existe diverses facons de calculer la relation non-lineaire et non-monotone entre
-#variables E et Y tel que : faire une transformation, utiliser une fonction non-lineaire...
+# les variables E et Y tel que : faire une transformation ou bien utiliser une fonction non-lineaire
 
 #Question_5
 independance<-function(X){
@@ -75,8 +75,8 @@ independance<-function(X){
 }
 
 independance(Database2$Marseille)
-#On regarde sur le fichier pdf t table avec les parametres suivants : 2 tailed, level of signifiance : 0.05,
-#degre de liberte : n - 1 (15 - 1 = 14). On remarque que dans le fichier pdf la valeur est de 2.145 
+# On regarde sur le fichier pdf t table avec les parametres suivants : 2 tailed, level of signifiance : 0.05,
+# degre de liberte : n - 1 (15 - 1 = 14). On remarque que dans le fichier pdf la valeur est de 2.145 
 # et ici nous obtenons 2.177 ce qui montre que avec alpha = 5% l'inflation n'affecte pas vraiment le cout
 # de la vie a marseille.
 
@@ -91,12 +91,12 @@ independance2<-function(X,Y){
 }
 
 independance2(Database2$Marseille,Database2$Aix)
-#On regarde sur le fichier pdf t table avec les parametres suivants : 2 tailed, level of signifiance : 0.05/0.02,
-#degré de liberte : n + n - 2 (15 + 15 - 2 = 28)
+# On regarde sur le fichier pdf t table avec les parametres suivants : 2 tailed, level of signifiance : 0.05/0.02,
+# degre de liberte : n + n - 2 (15 + 15 - 2 = 28)
 # avec alpha = 5% : etant donne que le resultat obtenu est de 2.32 au lieu de 2.048 
 # il y a une dependance significative entre Marseille et Aix. 
 # avec alpha = 2% : on a 2.468 ce qui est nettement plus proche et superieur a notre valeur, 
-#il y a donc moins de dependance.
+# il y a donc moins de dependance.
 
 #Quesion_7_a
 senteur<-matrix(c(9,3,3,1,1528,106,117,381) ,ncol = 4 ,byrow = TRUE)
@@ -134,7 +134,7 @@ khideux()
 
 #Question_7_c
 # En regardant le fichier pdf table_khi_2 on remarque que nous devrions avoir une valeur inferieure ou egale a
-#7.81 donc nous sommes largement au dessus l'hypothese est fausse.
+# 7.81 donc nous sommes largement au dessus l'hypothese est fausse.
 
 #Question_8
 
@@ -154,25 +154,25 @@ khideux_indep <- function(mat) {
   return (khi_deux)
 }
 
-#On remarque que le resultat de khideux_indep(form) est 75.1564 > la valeur obtenue avec 
-#alpha = 5% donc la variable est dependante
+# On remarque que le resultat de khideux_indep(form) est 75.1564 > la valeur obtenue avec 
+# alpha = 5% donc la variable est dependante
 khideux_indep(form)
-#On remarque que le resultat de khideux_indep(color) est 2.39415 < la valeur obtenue avec 
-#alpha = 5% donc la variable est independante
+# On remarque que le resultat de khideux_indep(color) est 2.39415 < la valeur obtenue avec 
+# alpha = 5% donc la variable est independante
 khideux_indep(color)
 
-#La premiere variable etant dependante elle est importante pour detecter un melanome
+# La premiere variable etant dependante elle est importante pour detecter un melanome
 
 #Question_9
-#D'apres les questions precedentes, le test Student/t est parametrique car il se base sur une distribution 
-#statistique sur les donnees
-#A contrario, le test du Khi Deux est non parametrique car il ne se base pas sur une distribution statistique.
-#Ce test utilise les donnees de maniere independante.
+# D'apres les questions precedentes, le test Student/t est parametrique car il se base sur une distribution 
+# statistique sur les donnees
+# A contrario, le test du Khi Deux est non parametrique car il ne se base pas sur une distribution statistique.
+# Ce test utilise les donnees de maniere independante.
 
 #Question_10
 
-#Nous ne pouvons pas appliquer les coefficents de Pearson et Spearman car ils permettent respectivement d'analyser
-#des relations lineaires et non lineaires en utilisant des methodes de correlation.
+# Nous ne pouvons pas appliquer les coefficents de Pearson et Spearman car ils permettent respectivement d'analyser
+# des relations lineaires et non lineaires en utilisant des methodes de correlation.
 
 detach(Database)
 
